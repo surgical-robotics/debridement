@@ -119,6 +119,44 @@ function setupVideoCarouselAutoplay() {
     });
 }
 
+// Match video heights
+function matchVideoHeights() {
+    // Match Phase 3 video 10 height to video 9
+    const video9 = document.getElementById('phase3-video9');
+    const video10 = document.getElementById('phase3-video10');
+
+    if (video9 && video10) {
+        // Wait for video 9 metadata to load
+        video9.addEventListener('loadedmetadata', function() {
+            const height9 = video9.offsetHeight;
+            video10.style.height = height9 + 'px';
+        });
+
+        // In case metadata is already loaded
+        if (video9.readyState >= 1) {
+            const height9 = video9.offsetHeight;
+            video10.style.height = height9 + 'px';
+        }
+    }
+
+    // Match hero video height to image
+    const heroImage = document.querySelector('.hero.teaser .image img');
+    const heroVideo = document.getElementById('hero-video');
+
+    if (heroImage && heroVideo) {
+        // Wait for image to load
+        if (heroImage.complete) {
+            const imageHeight = heroImage.offsetHeight;
+            heroVideo.style.height = imageHeight + 'px';
+        } else {
+            heroImage.addEventListener('load', function() {
+                const imageHeight = heroImage.offsetHeight;
+                heroVideo.style.height = imageHeight + 'px';
+            });
+        }
+    }
+}
+
 $(document).ready(function() {
     // Check for click events on the navbar burger icon
 
@@ -133,10 +171,16 @@ $(document).ready(function() {
 
 	// Initialize all div with carousel class
     var carousels = bulmaCarousel.attach('.carousel', options);
-	
+
     bulmaSlider.attach();
-    
+
     // Setup video autoplay for carousel
     setupVideoCarouselAutoplay();
+
+    // Match video heights
+    matchVideoHeights();
+
+    // Re-match on window resize
+    window.addEventListener('resize', matchVideoHeights);
 
 })
