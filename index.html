@@ -211,9 +211,11 @@
           </figure>
         </div>
         <div class="column is-half">
-          <video poster="" id="hero-video" autoplay controls muted loop height="100%" preload="metadata">
-            <source src="static/videos/1.mov" type="video/mp4">
-          </video>
+          <figure class="image">
+            <video poster="" id="hero-video" autoplay controls muted loop width="100%" preload="metadata">
+              <source src="static/videos/1.mov" type="video/mp4">
+            </video>
+          </figure>
         </div>
       </div>
       <h2 class="subtitle has-text-centered" style="margin-top: 1.5rem;">
@@ -251,9 +253,9 @@
       <!-- Phase 1: On-the-fly Calibration -->
       <div class="box" style="margin-bottom: 2rem;">
         <h3 class="title is-4">Phase 1: On-the-fly Calibration for Gripper Tip Alignment</h3>
-        <div class="columns is-multiline">
+        <div class="columns">
           <div class="column is-one-third">
-            <video controls muted loop height="100%" preload="metadata">
+            <video controls muted loop width="100%" preload="metadata">
               <source src="static/videos/2.mp4" type="video/mp4">
             </video>
           </div>
@@ -263,34 +265,38 @@
       <!-- Phase 2: Relative Position Recognition -->
       <div class="box" style="margin-bottom: 2rem;">
         <h3 class="title is-4">Phase 2: Relative Position Recognition using Monocular Attention Windows</h3>
-        <div class="columns is-multiline">
+        <!-- First row: videos 3, 5, 7 -->
+        <div class="columns">
           <div class="column is-one-third">
-            <video controls muted loop height="100%" preload="metadata">
+            <video controls muted loop width="100%" preload="metadata">
               <source src="static/videos/3.mov" type="video/mp4">
             </video>
           </div>
           <div class="column is-one-third">
-            <video controls muted loop height="100%" preload="metadata">
-              <source src="static/videos/4.mp4" type="video/mp4">
-            </video>
-          </div>
-          <div class="column is-one-third">
-            <video controls muted loop height="100%" preload="metadata">
+            <video controls muted loop width="100%" preload="metadata">
               <source src="static/videos/5.mov" type="video/mp4">
             </video>
           </div>
           <div class="column is-one-third">
-            <video controls muted loop height="100%" preload="metadata">
+            <video controls muted loop width="100%" preload="metadata">
+              <source src="static/videos/7.mov" type="video/mp4">
+            </video>
+          </div>
+        </div>
+        <!-- Second row: videos 4, 6, 8 -->
+        <div class="columns">
+          <div class="column is-one-third">
+            <video controls muted loop width="100%" preload="metadata">
+              <source src="static/videos/4.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="column is-one-third">
+            <video controls muted loop width="100%" preload="metadata">
               <source src="static/videos/6.mp4" type="video/mp4">
             </video>
           </div>
           <div class="column is-one-third">
-            <video controls muted loop height="100%" preload="metadata">
-              <source src="static/videos/7.mov" type="video/mp4">
-            </video>
-          </div>
-          <div class="column is-one-third">
-            <video controls muted loop height="100%" preload="metadata">
+            <video controls muted loop width="100%" preload="metadata">
               <source src="static/videos/8.mp4" type="video/mp4">
             </video>
           </div>
@@ -301,13 +307,13 @@
       <div class="box">
         <h3 class="title is-4">Phase 3: Monocular Feature Servoing</h3>
         <div class="columns">
-          <div class="column is-one-third">
-            <video controls muted loop height="100%" preload="metadata">
+          <div class="column is-half">
+            <video controls muted loop width="100%" preload="metadata">
               <source src="static/videos/9.mp4" type="video/mp4">
             </video>
           </div>
-          <div class="column is-one-third">
-            <video controls muted loop height="100%" preload="metadata">
+          <div class="column is-half">
+            <video controls muted loop width="100%" preload="metadata">
               <source src="static/videos/10.mp4" type="video/mp4">
             </video>
           </div>
