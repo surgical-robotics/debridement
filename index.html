@@ -204,14 +204,14 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <div class="columns is-vcentered">
-        <div class="column is-half">
-          <figure class="image">
+      <div class="columns is-vcentered" style="align-items: stretch;">
+        <div class="column is-half" style="display: flex;">
+          <figure class="image" style="width: 100%;">
             <img src="static/images/Abstract.png" alt="MonoDebris pipeline overview" loading="lazy" style="width: 100%; height: auto;"/>
           </figure>
         </div>
-        <div class="column is-half">
-          <video poster="" id="hero-video" autoplay controls muted loop playsinline style="width: 100%; height: auto; object-fit: contain;">
+        <div class="column is-half" style="display: flex;">
+          <video poster="" id="hero-video" autoplay controls muted loop playsinline style="width: 100%; height: 100%; object-fit: contain;">
             <source src="static/videos/1.mov" type="video/mp4">
           </video>
         </div>
@@ -304,14 +304,14 @@
       <!-- Phase 3: Monocular Feature Servoing -->
       <div class="box">
         <h3 class="title is-4">Phase 3: Monocular Feature Servoing</h3>
-        <div class="columns is-vcentered">
-          <div class="column is-half">
+        <div class="columns is-vcentered" style="align-items: stretch;">
+          <div class="column is-half" style="display: flex;">
             <video autoplay controls muted loop playsinline width="100%" preload="metadata" style="display: block;">
               <source src="static/videos/9.mp4" type="video/mp4">
             </video>
           </div>
-          <div class="column is-half">
-            <video autoplay controls muted loop playsinline preload="metadata" style="width: 100%; height: auto; max-height: 100%; object-fit: contain; display: block;">
+          <div class="column is-half" style="display: flex;">
+            <video autoplay controls muted loop playsinline preload="metadata" style="width: 100%; height: 100%; object-fit: contain; display: block;">
               <source src="static/videos/10.mp4" type="video/mp4">
             </video>
           </div>
@@ -352,7 +352,7 @@
 
       <!-- Comparison Study -->
       <div class="box" style="margin-bottom: 2rem;">
-        <h3 class="title is-4">Comparison Study</h3>
+        <h3 class="title is-4">Comparison Study <span style="font-size: 0.8em; color: #666;">(×10 Speed)</span></h3>
         <div class="columns is-multiline">
           <!-- First row -->
           <div class="column is-one-third">
@@ -403,7 +403,7 @@
             <video autoplay controls muted loop playsinline width="100%" preload="metadata">
               <source src="static/videos/17_failure_1.mp4" type="video/mp4">
             </video>
-            <p class="has-text-centered" style="margin-top: 0.5rem;"><strong>Failure Case 1: Gripper Jamming</strong></p>
+            <p class="has-text-centered" style="margin-top: 0.5rem;"><strong>Failure Case 1: Fragment Rolls Over</strong></p>
           </div>
           <div class="column is-half">
             <video autoplay controls muted loop playsinline width="100%" preload="metadata">
