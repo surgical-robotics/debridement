@@ -1,0 +1,26 @@
+/* Video download protection */
+video {
+  /* Disable right-click context menu */
+  pointer-events: auto;
+}
+
+/* Hide download button in video controls for browsers that support it */
+video::-webkit-media-controls-download-button {
+  display: none;
+}
+
+video::-webkit-media-controls-enclosure {
+  overflow: hidden;
+}
+
+video::-internal-media-controls-download-button {
+  display: none;
+}
+
+/* Prevent text selection on video elements */
+video {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}

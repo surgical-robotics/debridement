@@ -68,6 +68,7 @@
   <!-- Critical CSS - Load synchronously -->
   <link rel="stylesheet" href="static/css/bulma.min.css">
   <link rel="stylesheet" href="static/css/index.css">
+  <link rel="stylesheet" href="static/css/video-protection.css">
   
   <!-- Non-critical CSS - Load asynchronously -->
   <link rel="preload" href="static/css/bulma-carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -211,7 +212,7 @@
           </figure>
         </div>
         <div class="column is-half">
-          <video poster="" id="hero-video" autoplay controls muted loop playsinline style="width: auto; height: 100%; object-fit: cover; max-width: 100%;">
+          <video poster="" id="hero-video" autoplay controls controlsList="nodownload" oncontextmenu="return false;" muted loop playsinline style="width: auto; height: 100%; object-fit: cover; max-width: 100%;">
             <source src="static/videos/1.mov" type="video/mp4">
           </video>
         </div>
@@ -253,7 +254,7 @@
         <h3 class="title is-4">Phase 1: On-the-fly Calibration for Gripper Tip Alignment</h3>
         <div class="columns is-centered">
           <div class="column is-half">
-            <video id="phase1-video2" autoplay controls muted loop playsinline preload="metadata" style="width: 100%; display: block; margin: 0 auto;">
+            <video id="phase1-video2" autoplay controls controlsList="nodownload" oncontextmenu="return false;" muted loop playsinline preload="metadata" style="width: 100%; display: block; margin: 0 auto;">
               <source src="static/videos/2.mp4" type="video/mp4">
             </video>
           </div>
@@ -266,17 +267,17 @@
         <!-- First row: videos 3, 5, 7 -->
         <div class="columns">
           <div class="column is-one-third">
-            <video id="phase2-video3" autoplay controls muted playsinline width="100%" preload="metadata">
+            <video id="phase2-video3" autoplay controls controlsList="nodownload" oncontextmenu="return false;" muted playsinline width="100%" preload="metadata">
               <source src="static/videos/3.mov" type="video/mp4">
             </video>
           </div>
           <div class="column is-one-third">
-            <video id="phase2-video5" autoplay controls muted playsinline width="100%" preload="metadata">
+            <video id="phase2-video5" autoplay controls controlsList="nodownload" oncontextmenu="return false;" muted playsinline width="100%" preload="metadata">
               <source src="static/videos/5.mov" type="video/mp4">
             </video>
           </div>
           <div class="column is-one-third">
-            <video id="phase2-video7" autoplay controls muted playsinline width="100%" preload="metadata">
+            <video id="phase2-video7" autoplay controls controlsList="nodownload" oncontextmenu="return false;" muted playsinline width="100%" preload="metadata">
               <source src="static/videos/7.mov" type="video/mp4">
             </video>
           </div>
@@ -284,17 +285,17 @@
         <!-- Second row: videos 4, 6, 8 -->
         <div class="columns">
           <div class="column is-one-third">
-            <video id="phase2-video4" autoplay controls muted playsinline width="100%" preload="metadata">
+            <video id="phase2-video4" autoplay controls controlsList="nodownload" oncontextmenu="return false;" muted playsinline width="100%" preload="metadata">
               <source src="static/videos/4.mp4" type="video/mp4">
             </video>
           </div>
           <div class="column is-one-third">
-            <video id="phase2-video6" autoplay controls muted playsinline width="100%" preload="metadata">
+            <video id="phase2-video6" autoplay controls controlsList="nodownload" oncontextmenu="return false;" muted playsinline width="100%" preload="metadata">
               <source src="static/videos/6.mp4" type="video/mp4">
             </video>
           </div>
           <div class="column is-one-third">
-            <video id="phase2-video8" autoplay controls muted playsinline width="100%" preload="metadata">
+            <video id="phase2-video8" autoplay controls controlsList="nodownload" oncontextmenu="return false;" muted playsinline width="100%" preload="metadata">
               <source src="static/videos/8.mp4" type="video/mp4">
             </video>
           </div>
@@ -307,12 +308,12 @@
         <div class="container is-max-desktop">
           <div style="display: flex; justify-content: center; align-items: flex-start; gap: 0;">
             <div style="width: 60%;">
-              <video id="phase3-video9" autoplay controls muted loop playsinline preload="metadata" style="display: block; width: 100%; height: auto;">
+              <video id="phase3-video9" autoplay controls controlsList="nodownload" oncontextmenu="return false;" muted loop playsinline preload="metadata" style="display: block; width: 100%; height: auto;">
                 <source src="static/videos/9.mp4" type="video/mp4">
               </video>
             </div>
             <div style="width: auto;">
-              <video id="phase3-video10" autoplay controls muted loop playsinline preload="metadata" style="width: auto; display: block;">
+              <video id="phase3-video10" autoplay controls controlsList="nodownload" oncontextmenu="return false;" muted loop playsinline preload="metadata" style="width: auto; display: block;">
                 <source src="static/videos/10.mp4" type="video/mp4">
               </video>
             </div>
@@ -358,38 +359,38 @@
         <div class="columns is-multiline">
           <!-- First row -->
           <div class="column is-one-third">
-            <video autoplay controls muted loop playsinline width="100%" preload="metadata">
+            <video autoplay controls controlsList="nodownload" oncontextmenu="return false;" muted loop playsinline width="100%" preload="metadata">
               <source src="static/videos/11_baseline1.mp4" type="video/mp4">
             </video>
             <p class="has-text-centered" style="margin-top: 0.5rem;"><strong>Procedural Baseline 1</strong></p>
           </div>
           <div class="column is-one-third">
-            <video autoplay controls muted loop playsinline width="100%" preload="metadata">
+            <video autoplay controls controlsList="nodownload" oncontextmenu="return false;" muted loop playsinline width="100%" preload="metadata">
               <source src="static/videos/12_ACT.mp4" type="video/mp4">
             </video>
             <p class="has-text-centered" style="margin-top: 0.5rem;"><strong>ACT</strong></p>
           </div>
           <div class="column is-one-third">
-            <video autoplay controls muted loop playsinline width="100%" preload="metadata">
+            <video autoplay controls controlsList="nodownload" oncontextmenu="return false;" muted loop playsinline width="100%" preload="metadata">
               <source src="static/videos/13_DP.mp4" type="video/mp4">
             </video>
             <p class="has-text-centered" style="margin-top: 0.5rem;"><strong>Diffusion Policy</strong></p>
           </div>
           <!-- Second row -->
           <div class="column is-one-third">
-            <video autoplay controls muted loop playsinline width="100%" preload="metadata">
+            <video autoplay controls controlsList="nodownload" oncontextmenu="return false;" muted loop playsinline width="100%" preload="metadata">
               <source src="static/videos/14_PI0.mp4" type="video/mp4">
             </video>
             <p class="has-text-centered" style="margin-top: 0.5rem;"><strong>π₀</strong></p>
           </div>
           <div class="column is-one-third">
-            <video autoplay controls muted loop playsinline width="100%" preload="metadata">
+            <video autoplay controls controlsList="nodownload" oncontextmenu="return false;" muted loop playsinline width="100%" preload="metadata">
               <source src="static/videos/15_PI05.mp4" type="video/mp4">
             </video>
             <p class="has-text-centered" style="margin-top: 0.5rem;"><strong>π₀.₅</strong></p>
           </div>
           <div class="column is-one-third">
-            <video autoplay controls muted loop playsinline width="100%" preload="metadata">
+            <video autoplay controls controlsList="nodownload" oncontextmenu="return false;" muted loop playsinline width="100%" preload="metadata">
               <source src="static/videos/16_MonoDebris.mp4" type="video/mp4">
             </video>
             <p class="has-text-centered" style="margin-top: 0.5rem;"><strong>MonoDebris (Ours)</strong></p>
@@ -402,13 +403,13 @@
         <h3 class="title is-4">Failure Cases</h3>
         <div class="columns">
           <div class="column is-half">
-            <video autoplay controls muted loop playsinline width="100%" preload="metadata">
+            <video autoplay controls controlsList="nodownload" oncontextmenu="return false;" muted loop playsinline width="100%" preload="metadata">
               <source src="static/videos/17_failure_1.mp4" type="video/mp4">
             </video>
             <p class="has-text-centered" style="margin-top: 0.5rem;"><strong>Failure Case 1: Fragment Rolls Over</strong></p>
           </div>
           <div class="column is-half">
-            <video autoplay controls muted loop playsinline width="100%" preload="metadata">
+            <video autoplay controls controlsList="nodownload" oncontextmenu="return false;" muted loop playsinline width="100%" preload="metadata">
               <source src="static/videos/18_failure_2.mp4" type="video/mp4">
             </video>
             <p class="has-text-centered" style="margin-top: 0.5rem;"><strong>Failure Case 2: Release Failure</strong></p>
@@ -421,13 +422,13 @@
         <h3 class="title is-4">Extension Testing</h3>
         <div class="columns">
           <div class="column is-half">
-            <video autoplay controls muted loop playsinline width="100%" preload="metadata">
+            <video autoplay controls controlsList="nodownload" oncontextmenu="return false;" muted loop playsinline width="100%" preload="metadata">
               <source src="static/videos/19.mp4" type="video/mp4">
             </video>
             <p class="has-text-centered" style="margin-top: 0.5rem;"><strong>Extension Test 1</strong></p>
           </div>
           <div class="column is-half">
-            <video autoplay controls muted loop playsinline width="100%" preload="metadata">
+            <video autoplay controls controlsList="nodownload" oncontextmenu="return false;" muted loop playsinline width="100%" preload="metadata">
               <source src="static/videos/20.mp4" type="video/mp4">
             </video>
             <p class="has-text-centered" style="margin-top: 0.5rem;"><strong>Extension Test 2</strong></p>
