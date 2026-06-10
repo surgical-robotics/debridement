@@ -129,13 +129,13 @@ function matchVideoHeights() {
         // Wait for video 9 metadata to load
         video9.addEventListener('loadedmetadata', function() {
             const height9 = video9.offsetHeight;
-            video10.style.height = (height9 / 2) + 'px';
+            video10.style.height = height9 + 'px';
         });
 
         // In case metadata is already loaded
         if (video9.readyState >= 1) {
             const height9 = video9.offsetHeight;
-            video10.style.height = (height9 / 2) + 'px';
+            video10.style.height = height9 + 'px';
         }
     }
 
