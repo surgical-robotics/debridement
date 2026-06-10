@@ -200,20 +200,29 @@
 </section>
 
 
-<!-- Teaser video-->
+<!-- Hero Section with Image and Video -->
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <video poster="" id="tree" autoplay controls muted loop height="100%" preload="metadata">
-        <source src="static/videos/1.mov" type="video/mp4">
-      </video>
-      <h2 class="subtitle has-text-centered">
-        MonoDebris demonstrates an augmented dexterity pipeline for autonomous surgical debridement using a cable-driven robot with monocular vision and on-the-fly calibration, achieving 93% success rate.
+      <div class="columns is-vcentered">
+        <div class="column is-half">
+          <figure class="image">
+            <img src="static/images/Abstract.png" alt="MonoDebris pipeline overview" loading="lazy"/>
+          </figure>
+        </div>
+        <div class="column is-half">
+          <video poster="" id="hero-video" autoplay controls muted loop height="100%" preload="metadata">
+            <source src="static/videos/1.mov" type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <h2 class="subtitle has-text-centered" style="margin-top: 1.5rem;">
+        MonoDebris demonstrates an augmented dexterity pipeline for autonomous surgical debridement using a cable-driven robot with monocular vision and on-the-fly calibration.
       </h2>
     </div>
   </div>
 </section>
-<!-- End teaser video -->
+<!-- End hero section -->
 
 <!-- Paper abstract -->
 <section class="section hero is-light">
@@ -233,23 +242,103 @@
 <!-- End paper abstract -->
 
 
-<!-- Image carousel -->
+<!-- Method Overview - Three Phases -->
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
       <h2 class="title is-3">Method Overview</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <img src="static/images/Abstract.png" alt="MonoDebris pipeline overview" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-          The debridement pipeline uses a dVRK gripper and RGB camera for on-the-fly calibration, interactive perception with monocular attention windows, and fragment removal.
-        </h2>
+
+      <!-- Phase 1: On-the-fly Calibration -->
+      <div class="box" style="margin-bottom: 2rem;">
+        <h3 class="title is-4">Phase 1: On-the-fly Calibration for Gripper Tip Alignment</h3>
+        <div class="columns is-multiline">
+          <div class="column is-one-third">
+            <video controls muted loop height="100%" preload="metadata">
+              <source src="static/videos/phase1.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="column is-one-third">
+            <video controls muted loop height="100%" preload="metadata">
+              <source src="static/videos/2.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
       </div>
+
+      <!-- Phase 2: Relative Position Recognition -->
+      <div class="box" style="margin-bottom: 2rem;">
+        <h3 class="title is-4">Phase 2: Relative Position Recognition using Monocular Attention Windows</h3>
+        <div class="columns is-multiline">
+          <div class="column is-one-third">
+            <video controls muted loop height="100%" preload="metadata">
+              <source src="static/videos/phase2_behind.mp4" type="video/mp4">
+            </video>
+            <p class="has-text-centered" style="margin-top: 0.5rem;"><small>Case 3: Behind</small></p>
+          </div>
+          <div class="column is-one-third">
+            <video controls muted loop height="100%" preload="metadata">
+              <source src="static/videos/phase2_collision.mp4" type="video/mp4">
+            </video>
+            <p class="has-text-centered" style="margin-top: 0.5rem;"><small>Case 2: Collision</small></p>
+          </div>
+          <div class="column is-one-third">
+            <video controls muted loop height="100%" preload="metadata">
+              <source src="static/videos/3.mov" type="video/mp4">
+            </video>
+          </div>
+          <div class="column is-one-third">
+            <video controls muted loop height="100%" preload="metadata">
+              <source src="static/videos/4.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="column is-one-third">
+            <video controls muted loop height="100%" preload="metadata">
+              <source src="static/videos/5.mov" type="video/mp4">
+            </video>
+          </div>
+          <div class="column is-one-third">
+            <video controls muted loop height="100%" preload="metadata">
+              <source src="static/videos/6.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="column is-one-third">
+            <video controls muted loop height="100%" preload="metadata">
+              <source src="static/videos/7.mov" type="video/mp4">
+            </video>
+          </div>
+          <div class="column is-one-third">
+            <video controls muted loop height="100%" preload="metadata">
+              <source src="static/videos/8.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+
+      <!-- Phase 3: Monocular Feature Servoing -->
+      <div class="box">
+        <h3 class="title is-4">Phase 3: Monocular Feature Servoing</h3>
+        <div class="columns">
+          <div class="column is-one-third">
+            <video controls muted loop height="100%" preload="metadata">
+              <source src="static/videos/phase3.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="column is-one-third">
+            <video controls muted loop height="100%" preload="metadata">
+              <source src="static/videos/9.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="column is-one-third">
+            <video controls muted loop height="100%" preload="metadata">
+              <source src="static/videos/10.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
-</div>
 </section>
-<!-- End image carousel -->
+<!-- End method overview -->
 
 
 
@@ -273,41 +362,98 @@
 <!-- End method details -->
 
 
-<!-- Video carousel -->
-<section class="hero is-small">
+<!-- Experimental Results -->
+<section class="hero is-small is-light">
   <div class="hero-body">
     <div class="container">
       <h2 class="title is-3">Experimental Results</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <video poster="" id="video1" controls muted loop height="100%" preload="metadata">
-            <source src="static/videos/11_baseline1.mp4" type="video/mp4">
-          </video>
-          <h2 class="subtitle has-text-centered">Procedural Baseline 1</h2>
+
+      <!-- Comparison Study -->
+      <div class="box" style="margin-bottom: 2rem;">
+        <h3 class="title is-4">Comparison Study</h3>
+        <div class="columns is-multiline">
+          <!-- First row -->
+          <div class="column is-one-third">
+            <video controls muted loop height="100%" preload="metadata">
+              <source src="static/videos/11_baseline1.mp4" type="video/mp4">
+            </video>
+            <p class="has-text-centered" style="margin-top: 0.5rem;"><strong>Procedural Baseline 1</strong></p>
+          </div>
+          <div class="column is-one-third">
+            <video controls muted loop height="100%" preload="metadata">
+              <source src="static/videos/12_ACT.mp4" type="video/mp4">
+            </video>
+            <p class="has-text-centered" style="margin-top: 0.5rem;"><strong>ACT Policy</strong></p>
+          </div>
+          <div class="column is-one-third">
+            <video controls muted loop height="100%" preload="metadata">
+              <source src="static/videos/13_DP.mp4" type="video/mp4">
+            </video>
+            <p class="has-text-centered" style="margin-top: 0.5rem;"><strong>Diffusion Policy</strong></p>
+          </div>
+          <!-- Second row -->
+          <div class="column is-one-third">
+            <video controls muted loop height="100%" preload="metadata">
+              <source src="static/videos/14_PI0.mp4" type="video/mp4">
+            </video>
+            <p class="has-text-centered" style="margin-top: 0.5rem;"><strong>π₀ Policy</strong></p>
+          </div>
+          <div class="column is-one-third">
+            <video controls muted loop height="100%" preload="metadata">
+              <source src="static/videos/15_PI05.mp4" type="video/mp4">
+            </video>
+            <p class="has-text-centered" style="margin-top: 0.5rem;"><strong>π₀.₅ Policy</strong></p>
+          </div>
+          <div class="column is-one-third">
+            <video controls muted loop height="100%" preload="metadata">
+              <source src="static/videos/16_MonoDebris.mp4" type="video/mp4">
+            </video>
+            <p class="has-text-centered" style="margin-top: 0.5rem;"><strong>MonoDebris (Ours)</strong></p>
+          </div>
         </div>
-        <div class="item item-video2">
-          <video poster="" id="video2" controls muted loop height="100%" preload="metadata">
-            <source src="static/videos/12_ACT.mp4" type="video/mp4">
-          </video>
-          <h2 class="subtitle has-text-centered">ACT Policy</h2>
+      </div>
+
+      <!-- Failure Cases -->
+      <div class="box" style="margin-bottom: 2rem;">
+        <h3 class="title is-4">Failure Cases</h3>
+        <div class="columns">
+          <div class="column is-half">
+            <video controls muted loop height="100%" preload="metadata">
+              <source src="static/videos/17_failure_1.mp4" type="video/mp4">
+            </video>
+            <p class="has-text-centered" style="margin-top: 0.5rem;"><strong>Failure Case 1: Gripper Jamming</strong></p>
+          </div>
+          <div class="column is-half">
+            <video controls muted loop height="100%" preload="metadata">
+              <source src="static/videos/18_failure_2.mp4" type="video/mp4">
+            </video>
+            <p class="has-text-centered" style="margin-top: 0.5rem;"><strong>Failure Case 2: Release Failure</strong></p>
+          </div>
         </div>
-        <div class="item item-video3">
-          <video poster="" id="video3" controls muted loop height="100%" preload="metadata">
-            <source src="static/videos/13_DP.mp4" type="video/mp4">
-          </video>
-          <h2 class="subtitle has-text-centered">Diffusion Policy</h2>
-        </div>
-        <div class="item item-video4">
-          <video poster="" id="video4" controls muted loop height="100%" preload="metadata">
-            <source src="static/videos/16_MonoDebris.mp4" type="video/mp4">
-          </video>
-          <h2 class="subtitle has-text-centered">MonoDebris (Ours)</h2>
+      </div>
+
+      <!-- Extension Testing -->
+      <div class="box">
+        <h3 class="title is-4">Extension Testing</h3>
+        <div class="columns">
+          <div class="column is-half">
+            <video controls muted loop height="100%" preload="metadata">
+              <source src="static/videos/19.mp4" type="video/mp4">
+            </video>
+            <p class="has-text-centered" style="margin-top: 0.5rem;"><strong>Extension Test 1</strong></p>
+          </div>
+          <div class="column is-half">
+            <video controls muted loop height="100%" preload="metadata">
+              <source src="static/videos/20.mp4" type="video/mp4">
+            </video>
+            <p class="has-text-centered" style="margin-top: 0.5rem;"><strong>Extension Test 2</strong></p>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </section>
-<!-- End video carousel -->
+<!-- End experimental results -->
 
 
 
