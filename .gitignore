@@ -1,0 +1,13 @@
+# PDF and Keynote files
+static/pdfs/*.pdf
+static/pdfs/*.key/
+static/pdfs/debridement.key/
+
+# System files
+.DS_Store
+**/.DS_Store
+
+# Editor files
+*.swp
+*.swo
+*~
