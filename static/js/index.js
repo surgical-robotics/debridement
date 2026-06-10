@@ -125,18 +125,28 @@ function matchVideoHeights() {
     const video9 = document.getElementById('phase3-video9');
     const video10 = document.getElementById('phase3-video10');
 
-    if (video9 && video10) {
-        // Wait for video 9 metadata to load
-        video9.addEventListener('loadedmetadata', function() {
+    function setVideo10Height() {
+        if (video9 && video10) {
             const height9 = video9.offsetHeight;
             video10.style.height = height9 + 'px';
-        });
+            video10.style.width = 'auto';
+        }
+    }
+
+    if (video9 && video10) {
+        // Wait for video 9 metadata to load
+        video9.addEventListener('loadedmetadata', setVideo10Height);
+
+        // Also wait for video 10 metadata
+        video10.addEventListener('loadedmetadata', setVideo10Height);
 
         // In case metadata is already loaded
         if (video9.readyState >= 1) {
-            const height9 = video9.offsetHeight;
-            video10.style.height = height9 + 'px';
+            setVideo10Height();
         }
+
+        // Extra check after a short delay
+        setTimeout(setVideo10Height, 100);
     }
 
     // Match hero video height to image
