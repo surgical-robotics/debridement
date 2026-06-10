@@ -119,6 +119,60 @@ function setupVideoCarouselAutoplay() {
     });
 }
 
+// Synchronize paired videos in Phase 2
+function synchronizeVideoPairs() {
+    const pairs = [
+        ['phase2-video3', 'phase2-video4'],
+        ['phase2-video5', 'phase2-video6'],
+        ['phase2-video7', 'phase2-video8']
+    ];
+
+    pairs.forEach(pair => {
+        const video1 = document.getElementById(pair[0]);
+        const video2 = document.getElementById(pair[1]);
+
+        if (!video1 || !video2) return;
+
+        let isPaused = false;
+
+        // When either video ends, pause both and restart together
+        function handleVideoEnd(e) {
+            if (isPaused) return;
+
+            isPaused = true;
+            video1.pause();
+            video2.pause();
+
+            // Wait a bit, then restart both videos together
+            setTimeout(() => {
+                video1.currentTime = 0;
+                video2.currentTime = 0;
+
+                Promise.all([
+                    video1.play(),
+                    video2.play()
+                ]).then(() => {
+                    isPaused = false;
+                }).catch(err => {
+                    console.log('Autoplay prevented:', err);
+                    isPaused = false;
+                });
+            }, 100);
+        }
+
+        video1.addEventListener('ended', handleVideoEnd);
+        video2.addEventListener('ended', handleVideoEnd);
+
+        // Ensure both videos start together
+        video1.addEventListener('loadedmetadata', () => {
+            video1.currentTime = 0;
+        });
+        video2.addEventListener('loadedmetadata', () => {
+            video2.currentTime = 0;
+        });
+    });
+}
+
 // Match video heights
 function matchVideoHeights() {
     // Match Phase 3 video 10 height to video 9
@@ -192,5 +246,8 @@ $(document).ready(function() {
 
     // Re-match on window resize
     window.addEventListener('resize', matchVideoHeights);
+
+    // Synchronize Phase 2 video pairs
+    synchronizeVideoPairs();
 
 })
