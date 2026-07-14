@@ -7,7 +7,7 @@
   <!-- Primary Meta Tags -->
   <!-- TODO: Replace with your paper title and author names -->
   <meta name="title" content="MACAW: Reliable And Efficient Surgical Debridement Using Monocular Adaptive Compact Attention Windows - Anonymous Authors">
-  <meta name="description" content="Augmented dexterity system for surgical debridement using cable-driven robots with planar-point alignment and MACAW, achieving 93% success rate.">
+  <meta name="description" content="Augmented dexterity system for surgical debridement using visual servoing and MACAW for depth control, achieving 93% success rate with 304 fragments per hour throughput.">
   <meta name="keywords" content="robotic surgery, augmented dexterity, cable-driven robot, surgical debridement, monocular vision, MACAW, attention windows, surgical automation, medical robotics">
   <!-- TODO: List all authors -->
   <meta name="author" content="Anonymous Authors">
@@ -18,7 +18,7 @@
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="MACAW Research">
   <meta property="og:title" content="MACAW: Reliable And Efficient Surgical Debridement Using Monocular Adaptive Compact Attention Windows">
-  <meta property="og:description" content="Augmented dexterity system for surgical debridement using cable-driven robots with planar-point alignment and MACAW, achieving 93% success rate.">
+  <meta property="og:description" content="Augmented dexterity system for surgical debridement using visual servoing and MACAW for depth control, achieving 93% success rate with 304 fragments per hour throughput.">
   <meta property="og:url" content="https://monodebris.github.io/debridement">
   <meta property="og:image" content="static/images/Abstract.png">
   <meta property="og:image:width" content="1200">
@@ -33,7 +33,7 @@
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="MACAW: Reliable And Efficient Surgical Debridement Using Monocular Adaptive Compact Attention Windows">
-  <meta name="twitter:description" content="Augmented dexterity system for surgical debridement using cable-driven robots with planar-point alignment and MACAW, achieving 93% success rate.">
+  <meta name="twitter:description" content="Augmented dexterity system for surgical debridement using visual servoing and MACAW for depth control, achieving 93% success rate with 304 fragments per hour throughput.">
   <meta name="twitter:image" content="static/images/Abstract.png">
   <meta name="twitter:image:alt" content="MACAW: Reliable And Efficient Surgical Debridement Using Monocular Adaptive Compact Attention Windows - Research Preview">
 
@@ -101,7 +101,7 @@
     "@context": "https://schema.org",
     "@type": "ScholarlyArticle",
     "headline": "MACAW: Reliable And Efficient Surgical Debridement Using Monocular Adaptive Compact Attention Windows",
-    "description": "Augmented dexterity system for surgical debridement using cable-driven robots with planar-point alignment and MACAW, achieving 93% success rate.",
+    "description": "Augmented dexterity system for surgical debridement using visual servoing and MACAW for depth control, achieving 93% success rate with 304 fragments per hour throughput.",
     "author": [
       {
         "@type": "Person",
@@ -116,7 +116,7 @@
     "url": "https://monodebris.github.io/debridement",
     "image": "static/images/Abstract.png",
     "keywords": ["robotic surgery", "augmented dexterity", "cable-driven robot", "surgical debridement", "monocular vision", "MACAW", "attention windows"],
-    "abstract": "Automating surgical subtasks such as debridement (removal of diseased or dead tissue fragments) with a cable-driven surgical robot could free surgeons from tedious and repetitive procedures, while remaining challenging due to imprecision in spatial perception and cable actuation. In this work, we present an augmented dexterity pipeline for surgical debridement using a da Vinci Research Kit (dVRK) cable-driven robot with one monocular RGB camera. We perform planar-point alignment to compensate for cable-driven robot kinematic and camera-to-base transformation inaccuracies, and introduce MACAW: Monocular Adaptive Compact Attention Windows, a novel approach to enable interactive depth perception for fragment grasping. Physical experiments achieved an average success rate of 93% for single-fragment removals and 95% for five-fragment removals with one human intervention.",
+    "abstract": "Augmenting the dexterity of human surgeons has the potential to free them from tedious subtasks. We consider debridement (removal of diseased or dead tissue fragments), which is challenging due to imprecision in spatial perception and cable actuation. We develop an augmented dexterity system for surgical debridement that uses visual servoing to align the cable-driven gripper with the target position in the image plane, and then introduces a novel approach to depth control, MACAW: Monocular Adaptive Compact Attention Windows. Across 100 physical trials using the da Vinci Research Kit (dVRK) robot, camera-frame servoing reduced average gripper position offset from 37 to fewer than 5 pixels within 4 optimization steps, taking an average of only 0.39s. MACAW significantly outperforms procedural and learned VLA baselines, achieving a 93% success rate at 11 seconds per fragment, yielding a throughput of 304 fragments per hour.",
     "isAccessibleForFree": true,
     "mainEntity": {
       "@type": "WebPage",
@@ -233,7 +233,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Automating surgical subtasks such as debridement (removal of diseased or dead tissue fragments) with a cable-driven surgical robot could free surgeons from tedious and repetitive procedures, while remaining challenging due to imprecision in spatial perception and cable actuation. In this work, we present an augmented dexterity pipeline for surgical debridement using a da Vinci Research Kit (dVRK) cable-driven robot with one monocular RGB camera. We perform planar-point alignment to compensate for cable-driven robot kinematic and camera-to-base transformation inaccuracies, and introduce MACAW: Monocular Adaptive Compact Attention Windows, a novel approach to enable interactive depth perception for fragment grasping. Across 100 physical trials, planar-point alignment showed that the average gripper position offset was reduced from 37 to fewer than 5 pixels within 4 optimization steps, taking an average online optimization time of only 0.39s. Physical experiments involving 100 single-fragment removals showed that MACAW achieved an average success rate of 93%, while five-fragment removals resulted in a 70% success rate, rising to 95% with one human intervention. MACAW significantly outperformed previous procedural baselines and learned policies, with improvement rates over the second-place learned policy reaching 15%, 75%, and 73%, respectively. It demonstrated an average removal time of 11 seconds per fragment, resulting in an effective throughput of 304 fragment removals per hour. Extending the evaluation to 400 single-fragment removals suggests consistent debridement performance, yielding a 92.25% success rate.
+            Augmenting the dexterity of human surgeons has the potential to free them from tedious subtasks. We consider debridement (removal of diseased or dead tissue fragments), which is challenging due to imprecision in spatial perception and cable actuation. We develop an augmented dexterity system for surgical debridement that uses visual servoing to align the cable-driven gripper with the target position in the image plane, and then introduces a novel approach to depth control, MACAW: Monocular Adaptive Compact Attention Windows. Across 100 physical trials using the da Vinci Research Kit (dVRK) robot, camera-frame servoing reduced average gripper position offset from 37 to fewer than 5 pixels within 4 optimization steps, taking an average of only 0.39s. MACAW significantly outperforms procedural and learned VLA baselines, achieving a 93% success rate at 11 seconds per fragment, yielding a throughput of 304 fragments per hour.
           </p>
         </div>
       </div>
@@ -249,9 +249,9 @@
     <div class="container">
       <h2 class="title is-3">Method Overview</h2>
 
-      <!-- Phase 1: Planar-Point Alignment -->
+      <!-- Phase 1: Camera-frame servoing -->
       <div class="box" style="margin-bottom: 2rem;">
-        <h3 class="title is-4">Phase 1: Planar-Point Alignment</h3>
+        <h3 class="title is-4">Phase 1: Camera-frame servoing</h3>
         <div class="columns is-centered">
           <div class="column is-half">
             <video id="phase1-video2" autoplay controls controlsList="nodownload" oncontextmenu="return false;" muted loop playsinline preload="metadata" style="width: 100%; display: block; margin: 0 auto;">
@@ -263,7 +263,7 @@
 
       <!-- Phase 2: Relative Position Recognition -->
       <div class="box" style="margin-bottom: 2rem;">
-        <h3 class="title is-4">Phase 2: Relative Position Recognition using MACAW</h3>
+        <h3 class="title is-4">Phase 2: Relative Position Recognition using the upper MACAW</h3>
         <!-- First row: videos 3, 5, 7 -->
         <div class="columns">
           <div class="column is-one-third">
@@ -302,9 +302,9 @@
         </div>
       </div>
 
-      <!-- Phase 3: Interactive Depth Perception using MACAW -->
+      <!-- Phase 3: Interactive Depth Perception using the lower MACAW -->
       <div class="box">
-        <h3 class="title is-4">Phase 3: Interactive Depth Perception using MACAW</h3>
+        <h3 class="title is-4">Phase 3: Interactive Depth Perception using the lower MACAW</h3>
         <div class="container is-max-desktop">
           <div style="display: flex; justify-content: center; align-items: flex-start; gap: 0;">
             <div style="width: 60%;">
@@ -334,12 +334,12 @@
     <div class="container">
       <h2 class="title is-3">Key Contributions</h2>
       <div class="content has-text-justified">
-        <ul>
-          <li><strong>Planar-Point Alignment:</strong> Dynamic gripper alignment approach that corrects inaccuracies in kinematics and camera-robot transformation of cable-driven robot in the image plane.</li>
-          <li><strong>MACAW: Monocular Adaptive Compact Attention Windows</strong> localize fragment positions via interactive perception for precise grasping, eliminating the reliance on accurate depth estimation.</li>
-          <li><strong>High Success Rate:</strong> Physical experiments on 100 trials achieved 93% success rate for single-fragment removal, and 95% for five-fragment removals with one human intervention, outperforming previous procedural baselines and SOTA policies.</li>
-          <li><strong>Efficient Throughput:</strong> Average removal time of 11 seconds per fragment, translating to 304 fragment removals per hour on a cable-driven da Vinci surgical robot.</li>
-        </ul>
+        <ol>
+          <li>An augmented dexterity system for surgical debridement using only one fixed monocular RGB camera for perception,</li>
+          <li>A novel camera-frame servoing technique that enables dynamic gripper alignment with goal positions in the image plane,</li>
+          <li>MACAW: Monocular Adaptive Compact Attention Windows, a novel depth perception method,</li>
+          <li>Physical experiments with deformable fragments that suggest up to 93% success rate with throughput of 304 fragments per hour, significantly outperforming procedural baselines and learned policies (including ACT, Diffusion Policy, π₀, and π₀.₅).</li>
+        </ol>
       </div>
     </div>
   </div>
